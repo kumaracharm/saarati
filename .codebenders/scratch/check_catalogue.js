@@ -1,0 +1,27 @@
+const path = require("path");
+const fs = require("fs");
+const ts = require(path.resolve("frontend/node_modules/typescript"));
+require.extensions[".ts"] = function (module, filename) {
+  const src = fs.readFileSync(filename, "utf8");
+  const out = ts.transpileModule(src, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2019, esModuleInterop: true }, fileName: filename });
+  module._compile(out.outputText, filename);
+};
+const cat = require(path.resolve("frontend/lib/schemeCatalogue.ts"));
+const matcher = require(path.resolve("frontend/lib/matcher.ts"));
+const full = cat.generateFullCatalogue();
+console.log("generateFullCatalogue length:", full.length);
+console.log("unique ids:", new Set(full.map(s => s.id)).size);
+const count = (key) => full.reduce((m, s) => { const k = String(s[key]); m[k] = (m[k] || 0) + 1; return m; }, {});
+console.log("by provider_type:", JSON.stringify(count("provider_type")));
+console.log("by domain:", JSON.stringify(count("domain")));
+console.log("SCHEME_CATALOGUE length:", cat.SCHEME_CATALOGUE.length);
+const profile = {};
+const verdicts = matcher.evaluateAll(full, profile);
+console.log("evaluateAll(full, {}) verdicts:", verdicts.length);
+const byDomain = verdicts.reduce((m, v) => { const s = full.find(x => x.id === (v.scheme_id ?? v.id)); const k = s ? String(s.domain) : "?"; m[k] = (m[k] || 0) + 1; return m; }, {});
+console.log("verdicts by domain:", JSON.stringify(byDomain));
+console.log("verdict keys:", Object.keys(verdicts[0] || {}).join(","));
+const mv = matcher.matchAll(profile, full);
+console.log("matchAll(profile, full) results:", mv.length);
+const mdef = matcher.matchAll(profile);
+console.log("matchAll(profile) default results:", mdef.length);

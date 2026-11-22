@@ -1,0 +1,18 @@
+npm notice run saarthi-frontend@0.1.0 lint
+npm notice run eslint
+
+D:\parallax\claim what's yours\frontend\app\results\page.tsx
+  170:7   warning  'PROVIDER_TABS' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  177:7   warning  'SCOPE_TABS' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  183:7   warning  'VERIFICATION_TABS' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  337:20  warning  'setProvider' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  338:17  warning  'setScope' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  339:24  warning  'setVerification' is assigned a value but never used    @typescript-eslint/no-unused-vars
+
+D:\parallax\claim what's yours\frontend\components\ProfileForm.tsx
+   599:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   623:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  1049:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+Γ£û 9 problems (0 errors, 9 warnings)
+

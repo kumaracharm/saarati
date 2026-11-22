@@ -1,0 +1,282 @@
+[
+  {
+    "id": "demo-state-merit",
+    "name": "[DEMO] State Merit Scholarship",
+    "provider": "Demonstration only - not a real scheme",
+    "jurisdiction": "Demonstration",
+    "academic_year": "demo-2025-26",
+    "is_demonstration": true,
+    "legacy_verification_status": "demonstration",
+    "record_version": 2,
+    "scheme_type": "central",
+    "category": "scholarships",
+    "geography": "India",
+    "verification_status": {
+      "amount": {"status": "unverified", "last_verified_at": null},
+      "deadline": {"status": "unverified", "last_verified_at": null},
+      "eligibility": {"status": "unverified", "last_verified_at": null},
+      "documents": {"status": "unverified", "last_verified_at": null}
+    },
+    "last_verified_at": null,
+    "source": {"publisher": "Demonstration only - not a real scheme", "url": null, "retrieved_at": null},
+    "provenance": "demo",
+    "application_url": null,
+    "guideline_url": null,
+    "deadline": null,
+    "last_verified_date": null,
+    "required_documents": [
+      "Placeholder: the official notice would list the required documents here"
+    ],
+    "application_steps": [
+      "Placeholder: the official notice would list the application steps here"
+    ],
+    "documents_checklist": [],
+    "clause_highlights": [],
+    "amount_status": "check_official_portal",
+    "deadline_status": "check_official_portal",
+    "eligibility_rules": [
+      {
+        "id": "demo-merit-pct",
+        "description": "Academic percentage of at least 60 (demonstration threshold)",
+        "field": "academic_percentage",
+        "operator": "gte",
+        "value": 60,
+        "mandatory": true,
+        "applies_when": null,
+        "reason_pass": "Academic percentage meets the demonstration threshold of 60.",
+        "reason_fail": "Academic percentage is below the demonstration threshold of 60.",
+        "reason_unknown": "Academic percentage was not provided."
+      },
+      {
+        "id": "demo-merit-level",
+        "description": "Education level is class 12, undergraduate or postgraduate (demonstration)",
+        "field": "education_level",
+        "operator": "in",
+        "value": ["class_12", "undergraduate", "postgraduate"],
+        "mandatory": true,
+        "applies_when": null,
+        "reason_pass": "Education level is within the demonstration eligible levels.",
+        "reason_fail": "Education level is outside the demonstration eligible levels.",
+        "reason_unknown": "Education level was not provided."
+      },
+      {
+        "id": "demo-merit-income",
+        "description": "Family income below 8 lakh per year (demonstration, optional)",
+        "field": "family_income_range",
+        "operator": "in",
+        "value": ["below_2_5_lakh", "2_5_to_5_lakh", "5_to_8_lakh"],
+        "mandatory": false,
+        "applies_when": null,
+        "reason_pass": "Family income range is within the demonstration limit.",
+        "reason_fail": "Family income range is above the demonstration limit.",
+        "reason_unknown": "Family income range was not provided."
+      }
+    ]
+  },
+  {
+    "id": "demo-category-support",
+    "name": "[DEMO] Category Support Grant",
+    "provider": "Demonstration only - not a real scheme",
+    "jurisdiction": "Demonstration",
+    "academic_year": "demo-2025-26",
+    "is_demonstration": true,
+    "legacy_verification_status": "demonstration",
+    "record_version": 2,
+    "scheme_type": "central",
+    "category": "scholarships",
+    "geography": "India",
+    "verification_status": {
+      "amount": {"status": "unverified", "last_verified_at": null},
+      "deadline": {"status": "unverified", "last_verified_at": null},
+      "eligibility": {"status": "unverified", "last_verified_at": null},
+      "documents": {"status": "unverified", "last_verified_at": null}
+    },
+    "last_verified_at": null,
+    "source": {"publisher": "Demonstration only - not a real scheme", "url": null, "retrieved_at": null},
+    "provenance": "demo",
+    "application_url": null,
+    "guideline_url": null,
+    "deadline": null,
+    "last_verified_date": null,
+    "required_documents": [
+      "Placeholder: the official notice would list the required documents here"
+    ],
+    "application_steps": [
+      "Placeholder: the official notice would list the application steps here"
+    ],
+    "documents_checklist": [],
+    "clause_highlights": [],
+    "amount_status": "check_official_portal",
+    "deadline_status": "check_official_portal",
+    "eligibility_rules": [
+      {
+        "id": "demo-cat-cert",
+        "description": "Officially certified category is SC or ST (demonstration)",
+        "field": "officially_certified_category",
+        "operator": "in",
+        "value": ["sc", "st"],
+        "mandatory": true,
+        "applies_when": null,
+        "reason_pass": "Officially certified category is within the demonstration eligible categories.",
+        "reason_fail": "Officially certified category is outside the demonstration eligible categories.",
+        "reason_unknown": "Officially certified category was not provided."
+      },
+      {
+        "id": "demo-cat-pct",
+        "description": "Academic percentage of at least 50 (demonstration threshold)",
+        "field": "academic_percentage",
+        "operator": "gte",
+        "value": 50,
+        "mandatory": true,
+        "applies_when": null,
+        "reason_pass": "Academic percentage meets the demonstration threshold of 50.",
+        "reason_fail": "Academic percentage is below the demonstration threshold of 50.",
+        "reason_unknown": "Academic percentage was not provided."
+      }
+    ]
+  },
+  {
+    "id": "demo-women-stem",
+    "name": "[DEMO] Women in STEM Fellowship",
+    "provider": "Demonstration only - not a real scheme",
+    "jurisdiction": "Demonstration",
+    "academic_year": "demo-2025-26",
+    "is_demonstration": true,
+    "legacy_verification_status": "demonstration",
+    "record_version": 2,
+    "scheme_type": "central",
+    "category": "farmer_livelihood_skill",
+    "geography": "India",
+    "verification_status": {
+      "amount": {"status": "unverified", "last_verified_at": null},
+      "deadline": {"status": "unverified", "last_verified_at": null},
+      "eligibility": {"status": "unverified", "last_verified_at": null},
+      "documents": {"status": "unverified", "last_verified_at": null}
+    },
+    "last_verified_at": null,
+    "source": {"publisher": "Demonstration only - not a real scheme", "url": null, "retrieved_at": null},
+    "provenance": "demo",
+    "application_url": null,
+    "guideline_url": null,
+    "deadline": null,
+    "last_verified_date": null,
+    "required_documents": [
+      "Placeholder: the official notice would list the required documents here"
+    ],
+    "application_steps": [
+      "Placeholder: the official notice would list the application steps here"
+    ],
+    "documents_checklist": [],
+    "clause_highlights": [],
+    "amount_status": "check_official_portal",
+    "deadline_status": "check_official_portal",
+    "eligibility_rules": [
+      {
+        "id": "demo-women-gender",
+        "description": "Gender is female (demonstration)",
+        "field": "gender",
+        "operator": "equals",
+        "value": "female",
+        "mandatory": true,
+        "applies_when": null,
+        "reason_pass": "Gender matches the demonstration requirement.",
+        "reason_fail": "Gender does not match the demonstration requirement.",
+        "reason_unknown": "Gender was not provided."
+      },
+      {
+        "id": "demo-women-inst",
+        "description": "Institution is government or government-aided (demonstration, applies to female applicants)",
+        "field": "institution_type",
+        "operator": "in",
+        "value": ["government", "government_aided"],
+        "mandatory": true,
+        "applies_when": {"gender": "female"},
+        "reason_pass": "Institution type is within the demonstration eligible types.",
+        "reason_fail": "Institution type is outside the demonstration eligible types.",
+        "reason_unknown": "Institution type was not provided."
+      }
+    ]
+  },
+  {
+    "id": "nsp-portal",
+    "name": "National Scholarship Portal (central schemes entry point)",
+    "provider": "Government of India (Ministry of Education, National Scholarship Portal)",
+    "jurisdiction": "Central",
+    "academic_year": "Check official portal",
+    "is_demonstration": false,
+    "legacy_verification_status": "unverified",
+    "record_version": 2,
+    "scheme_type": "central",
+    "category": "scholarships",
+    "geography": "India",
+    "verification_status": {
+      "amount": {"status": "unverified", "last_verified_at": null},
+      "deadline": {"status": "unverified", "last_verified_at": null},
+      "eligibility": {"status": "unverified", "last_verified_at": null},
+      "documents": {"status": "unverified", "last_verified_at": null}
+    },
+    "last_verified_at": null,
+    "source": {"publisher": "Government of India (Ministry of Education, National Scholarship Portal)", "url": null, "retrieved_at": null},
+    "provenance": "check_official_portal",
+    "official_url": "https://scholarships.gov.in/",
+    "guideline_pdf_url": null,
+    "application_url": "https://scholarships.gov.in/",
+    "guideline_url": null,
+    "deadline": null,
+    "last_verified_date": null,
+    "required_documents": [
+      "Check official portal for the document list of each scheme"
+    ],
+    "application_steps": [
+      "Open the official portal and choose the scheme you qualify for",
+      "Read the official notice for that scheme before applying"
+    ],
+    "documents_checklist": [],
+    "clause_highlights": [],
+    "source_checked_on": null,
+    "amount_status": "check_official_portal",
+    "deadline_status": "check_official_portal",
+    "eligibility_rules": []
+  },
+  {
+    "id": "karnataka-ssp-portal",
+    "name": "Karnataka State Scholarship Portal (SSP)",
+    "provider": "Government of Karnataka",
+    "jurisdiction": "Karnataka",
+    "academic_year": "Check official portal",
+    "is_demonstration": false,
+    "legacy_verification_status": "unverified",
+    "record_version": 2,
+    "scheme_type": "state",
+    "category": "scholarships",
+    "geography": "Karnataka",
+    "verification_status": {
+      "amount": {"status": "unverified", "last_verified_at": null},
+      "deadline": {"status": "unverified", "last_verified_at": null},
+      "eligibility": {"status": "unverified", "last_verified_at": null},
+      "documents": {"status": "unverified", "last_verified_at": null}
+    },
+    "last_verified_at": null,
+    "source": {"publisher": "Government of Karnataka", "url": null, "retrieved_at": null},
+    "provenance": "check_official_portal",
+    "official_url": "https://ssp.karnataka.gov.in/",
+    "guideline_pdf_url": null,
+    "application_url": "https://ssp.karnataka.gov.in/",
+    "guideline_url": "https://ssp.postmatric.karnataka.gov.in/",
+    "deadline": null,
+    "last_verified_date": null,
+    "required_documents": [
+      "Check official portal for the document list"
+    ],
+    "application_steps": [
+      "Open the official portal and register or log in",
+      "Check the official notice for your scheme and apply before its last date"
+    ],
+    "documents_checklist": [],
+    "clause_highlights": [],
+    "source_checked_on": null,
+    "amount_status": "check_official_portal",
+    "deadline_status": "check_official_portal",
+    "eligibility_rules": []
+  }
+]

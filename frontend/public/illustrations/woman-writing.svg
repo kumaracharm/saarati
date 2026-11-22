@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-hidden="true">
+  <circle cx="120" cy="100" r="92" fill="#FBEBDD"/>
+  <!-- long hair behind head -->
+  <path d="M88 52 Q86 26 110 26 Q134 26 132 52 L134 102 Q122 96 110 96 Q98 96 86 102 Z" fill="#2B1D14"/>
+  <!-- body / blouse -->
+  <path d="M72 150 L74 102 Q76 86 94 86 L126 86 Q144 86 146 102 L148 150 Z" fill="#D08A4E"/>
+  <!-- scarf -->
+  <path d="M96 88 Q110 100 126 88" stroke="#FBEBDD" stroke-width="4" fill="none"/>
+  <!-- neck and head -->
+  <rect x="103" y="66" width="14" height="14" fill="#E0A77A"/>
+  <circle cx="110" cy="52" r="19" fill="#E0A77A"/>
+  <!-- fringe -->
+  <path d="M91 48 Q96 34 110 34 Q126 34 129 48 Q118 40 110 40 Q99 40 91 48 Z" fill="#2B1D14"/>
+  <circle cx="117" cy="53" r="2" fill="#2B1D14"/>
+  <path d="M113 62 Q118 65 122 62" stroke="#7A4A22" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- desk with small plant -->
+  <rect x="36" y="134" width="170" height="10" rx="4" fill="#7A4A22"/>
+  <rect x="50" y="144" width="8" height="40" fill="#5A3518"/>
+  <rect x="190" y="144" width="8" height="40" fill="#5A3518"/>
+  <path d="M60 134 L60 122" stroke="#5E7A3A" stroke-width="2"/>
+  <circle cx="60" cy="118" r="6" fill="#B87333"/>
+  <!-- notebook -->
+  <rect x="116" y="118" width="60" height="16" rx="2" fill="#FFFFFF" stroke="#7A4A22" stroke-width="2" transform="rotate(5 146 126)"/>
+  <!-- writing arm and hand -->
+  <path d="M134 104 Q146 114 142 124" stroke="#D08A4E" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <circle cx="142" cy="124" r="6" fill="#E0A77A"/>
+  <!-- pen, bobbing while writing -->
+  <g>
+    <line x1="148" y1="122" x2="172" y2="106" stroke="#3B2A20" stroke-width="3" stroke-linecap="round"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;3 -2;0 0" dur="0.9s" repeatCount="indefinite"/>
+  </g>
+</svg>

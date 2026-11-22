@@ -1,0 +1,44 @@
+
+=== VoiceInput lang=en (recognition.lang expected en-IN) ===
+A start: recognition.lang="en-IN" started=1
+A after start: listening(aria-pressed)=true label="Stop listening" error=""
+A after error: listening(aria-pressed)=false label="Speak your situation" error="Microphone not available. Type instead."
+A after stop(onend): listening(aria-pressed)=false label="Speak your situation" error="Microphone not available. Type instead."
+B after stop click: recognition.stopped=1
+B before onend: listening(aria-pressed)=true label="Stop listening" error=""
+B after onend: listening(aria-pressed)=false label="Speak your situation" error=""
+C after start() throws: listening(aria-pressed)=false label="Speak your situation" error="Microphone not available. Type instead."
+
+=== VoiceInput lang=kn (recognition.lang expected kn-IN) ===
+A start: recognition.lang="kn-IN" started=1
+A after start: listening(aria-pressed)=true label="α▓åα▓▓α▓┐α▓╕α│üα▓╡α│üα▓ªα▓¿α│ìα▓¿α│ü α▓¿α▓┐α▓▓α│ìα▓▓α▓┐α▓╕α▓┐" error=""
+A after error: listening(aria-pressed)=false label="α▓¿α▓┐α▓«α│ìα▓« α▓¬α▓░α▓┐α▓╕α│ìα▓Ñα▓┐α▓ñα▓┐α▓»α▓¿α│ìα▓¿α│ü α▓╣α│çα▓│α▓┐" error="α▓«α│êα▓òα│ìα▓░α│ïα▓½α│ïα▓¿α│ì α▓▓α▓¡α│ìα▓»α▓╡α▓┐α▓▓α│ìα▓▓. α▓¼α▓ªα▓▓α▓┐α▓ùα│å α▓ƒα│êα▓¬α│ì α▓«α▓╛α▓íα▓┐."
+A after stop(onend): listening(aria-pressed)=false label="α▓¿α▓┐α▓«α│ìα▓« α▓¬α▓░α▓┐α▓╕α│ìα▓Ñα▓┐α▓ñα▓┐α▓»α▓¿α│ìα▓¿α│ü α▓╣α│çα▓│α▓┐" error="α▓«α│êα▓òα│ìα▓░α│ïα▓½α│ïα▓¿α│ì α▓▓α▓¡α│ìα▓»α▓╡α▓┐α▓▓α│ìα▓▓. α▓¼α▓ªα▓▓α▓┐α▓ùα│å α▓ƒα│êα▓¬α│ì α▓«α▓╛α▓íα▓┐."
+B after stop click: recognition.stopped=1
+B before onend: listening(aria-pressed)=true label="α▓åα▓▓α▓┐α▓╕α│üα▓╡α│üα▓ªα▓¿α│ìα▓¿α│ü α▓¿α▓┐α▓▓α│ìα▓▓α▓┐α▓╕α▓┐" error=""
+B after onend: listening(aria-pressed)=false label="α▓¿α▓┐α▓«α│ìα▓« α▓¬α▓░α▓┐α▓╕α│ìα▓Ñα▓┐α▓ñα▓┐α▓»α▓¿α│ìα▓¿α│ü α▓╣α│çα▓│α▓┐" error=""
+C after start() throws: listening(aria-pressed)=false label="α▓¿α▓┐α▓«α│ìα▓« α▓¬α▓░α▓┐α▓╕α│ìα▓Ñα▓┐α▓ñα▓┐α▓»α▓¿α│ìα▓¿α│ü α▓╣α│çα▓│α▓┐" error="α▓«α│êα▓òα│ìα▓░α│ïα▓½α│ïα▓¿α│ì α▓▓α▓¡α│ìα▓»α▓╡α▓┐α▓▓α│ìα▓▓. α▓¼α▓ªα▓▓α▓┐α▓ùα│å α▓ƒα│êα▓¬α│ì α▓«α▓╛α▓íα▓┐."
+
+=== VoiceInput lang=en NO SpeechRecognition API ===
+note shown: "Voice input is not available in this browser. Type your situation instead."
+
+=== VoiceInput lang=kn NO SpeechRecognition API ===
+note shown: "α▓ê α▓¼α│ìα▓░α│îα▓╕α▓░α│ìΓÇîα▓¿α▓▓α│ìα▓▓α▓┐ α▓ºα│ìα▓╡α▓¿α▓┐ α▓çα▓¿α│ìΓÇîα▓¬α│üα▓ƒα│ì α▓▓α▓¡α│ìα▓»α▓╡α▓┐α▓▓α│ìα▓▓. α▓¼α▓ªα▓▓α▓┐α▓ùα│å α▓¿α▓┐α▓«α│ìα▓« α▓¬α▓░α▓┐α▓╕α│ìα▓Ñα▓┐α▓ñα▓┐α▓»α▓¿α│ìα▓¿α│ü α▓ƒα│êα▓¬α│ì α▓«α▓╛α▓íα▓┐."
+
+--- ProfileForm: API resolves ---
+elapsed=1ms router.push=["/results"]
+session writes: matches={"matches":[]}, entitleiq.matchSource="api"
+matches written: {"matches":[]}
+submit button after finally: "See my matches" (submitting reset YES)
+
+--- ProfileForm: API rejects (server error) ---
+elapsed=0ms router.push=["/results"]
+session writes: matches=[{"local":true}], entitleiq.matchSource="local"
+matches written: [{"local":true}]
+submit button after finally: "See my matches" (submitting reset YES)
+
+--- ProfileForm: API never settles (5s timeout) ---
+elapsed=5017ms router.push=["/results"]
+session writes: matches=[{"local":true}], entitleiq.matchSource="local"
+matches written: [{"local":true}]
+submit button after finally: "See my matches" (submitting reset YES)

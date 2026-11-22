@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+env/
+venv/
+ENV/
+.pytest_cache/
+*.log
+pytest*.log
+build*.log
+dev-server.log
+lint-report.json
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Misc
+.DS_Store
+*.pem
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

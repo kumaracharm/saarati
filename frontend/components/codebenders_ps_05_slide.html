@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAARTHI — CodeBenders Ace Builders Hackathon 2026 (PS-05)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --bg-canvas: #faf8f5;
+      --surface-glass: rgba(255, 255, 255, 0.92);
+      --surface-solid: #ffffff;
+      --ink-primary: #111827;
+      --ink-secondary: #3f3f46;
+      --accent-maroon: #7f1d1d;
+      --accent-maroon-deep: #5c1212;
+      --border-stone: #e7e5e4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-canvas);
+      color: var(--ink-primary);
+      overflow-x: hidden;
+    }
+
+    /* Subtle high-contrast editorial grid & warm ivory-white wash */
+    .slide-backdrop {
+      background:
+        radial-gradient(circle at 12% 10%, rgba(127, 29, 29, 0.06) 0%, transparent 42%),
+        radial-gradient(circle at 88% 88%, rgba(136, 19, 55, 0.05) 0%, transparent 45%),
+        linear-gradient(180deg, #ffffff 0%, #faf8f5 100%);
+    }
+
+    .glass-card {
+      background: var(--surface-glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-stone);
+      box-shadow: 0 8px 28px -12px rgba(17, 24, 39, 0.08);
+      border-radius: 1rem;
+    }
+
+    .maroon-badge {
+      background-color: #7f1d1d;
+      color: #ffffff;
+    }
+
+    .maroon-soft-pill {
+      background-color: #fef2f2;
+      color: #7f1d1d;
+      border: 1px solid #fecaca;
+    }
+
+    /* 16:9 presentation framing on desktop while adapting gracefully on smaller screens */
+    @media (min-width: 1024px) {
+      .slide-viewport {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .slide-stage {
+        width: min(96vw, calc(92vh * 16 / 9));
+        aspect-ratio: 16 / 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    @media print {
+      @page {
+        size: landscape;
+        margin: 0.4in;
+      }
+      html, body, .slide-viewport, .slide-stage {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: auto !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: visible !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .glass-card {
+        background: #ffffff !important;
+        box-shadow: none !important;
+        border: 1px solid #d6d3d1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="slide-backdrop antialiased selection:bg-[#7f1d1d] selection:text-white">
+  <div id="slide-root" class="slide-viewport w-full">
+    <main class="slide-stage glass-card w-full p-4 sm:p-6 lg:p-7 gap-3 lg:gap-4">
+
+      <!-- Top Header & Event Metadata -->
+      <header class="border-b-2 border-[#7f1d1d] pb-2.5 lg:pb-3 flex flex-col md:flex-row md:items-end md:justify-between gap-2">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="maroon-badge text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-md">
+              CodeBenders Ace Builders Hackathon 2026
+            </span>
+            <span class="maroon-soft-pill text-[11px] font-semibold tracking-wide uppercase px-2.5 py-0.5 rounded-md">
+              Problem Statement 5 · Citizens &amp; Public Services
+            </span>
+          </div>
+          <div class="flex flex-wrap items-baseline gap-2.5">
+            <h1 class="text-xl sm:text-2xl lg:text-[26px] font-extrabold tracking-tight text-[#111827] leading-tight">
+              Claim What’s Yours — <span class="text-[#7f1d1d]">SAARTHI</span>
+            </h1>
+            <span class="text-xs sm:text-sm font-semibold text-[#3f3f46]">
+              Plain-Language Eligibility, Document Readiness &amp; Guided Claims
+            </span>
+          </div>
+        </div>
+        <div class="text-left md:text-right shrink-0">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-[#7f1d1d]">
+            Problem &amp; Requirements Brief
+          </p>
+          <p class="text-xs text-[#3f3f46] font-medium">
+            Transparent Rule Reasoning · Zero Sensitive ID Storage
+          </p>
+        </div>
+      </header>
+
+      <!-- Three Scannable Columns -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-4 flex-1 min-h-0">
+
+        <!-- Column 1: The Problem & Who It Is For -->
+        <article class="lg:col-span-4 bg-white/95 border border-[#e7e5e4] rounded-xl p-3.5 lg:p-4 flex flex-col justify-between gap-2.5">
+          <div>
+            <div class="flex items-center justify-between border-b border-[#f5f5f4] pb-1.5 mb-2">
+              <h2 class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#7f1d1d]">
+                01 · The Problem
+              </h2>
+              <span class="text-[11px] font-semibold text-[#3f3f46]">High Unclaimed Gap</span>
+            </div>
+            <p class="text-xs sm:text-[13px] leading-snug text-[#111827] font-medium mb-2">
+              Hundreds of central &amp; state schemes—scholarships, pensions, health cover, housing, and farm support—go unclaimed because:
+            </p>
+            <ul class="space-y-1.5 text-xs text-[#111827]">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>
+                <span>Notices &amp; portals are scattered with dense, hard-to-read eligibility rules.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#7f1d1d] shrink-0"></span>
+                <span>Required paperwork is unclear, causing missed windows &amp; costly middlemen.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-[#faf8f5] border border-[#e7e5e4] rounded-lg p-2.5">
+            <h3 class="text-[11px] font-extrabold uppercase tracking-wider text-[#111827] mb-1">
+              Who It Serves (State-Focused)
+            </h3>
+            <p class="text-xs text-[#111827] leading-snug mb-1.5">
+              High-miss groups in a specific state context:
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-white border border-[#d6d3d1] text-[#111827]">Low-Income Students</span>
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-white border border-[#d6d3d1] text-[#111827]">Senior Citizens</span>
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-white border border-[#d6d3d1] text-[#111827]">Small Farmers</span>
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-white border border-[#d6d3d1] text-[#111827]">Women Entrepreneurs</span>
+              <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-white border border-[#d6d3d1] text-[#111827]">Daily-Wage Families</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Column 2: Challenge & Mandatory Solution Pillars -->
+        <article class="lg:col-span-5 bg-white/95 border border-[#e7e5e4] rounded-xl p-3.5 lg:p-4 flex flex-col justify-between gap-2">
+          <div>
+            <div class="flex items-center justify-between border-b border-[#f5f5f4] pb-1.5 mb-2">
+              <h2 class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#7f1d1d]">
+                02 · Challenge &amp; Solution Pillars
+              </h2>
+              <span class="text-[11px] font-semibold text-[#3f3f46]">5 Core Requirements</span>
+            </div>
+            <p class="text-xs text-[#3f3f46] font-medium mb-2">
+              Describe a situation in plain language—get likely fits, exact reasons, documents, and next steps:
+            </p>
+            <ol class="space-y-1.5 text-xs text-[#111827]">
+              <li class="flex items-start gap-2">
+                <span class="font-extrabold text-[#7f1d1d] shrink-0">1.</span>
+                <span><strong>Plain-Language Input:</strong> Typed or spoken (incl. regional language) instead of a rigid long form.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="font-extrabold text-[#7f1d1d] shrink-0">2.</span>
+                <span><strong>Explainable Matching:</strong> Shows which schemes fit and <em>which rule</em> each match relies on.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="font-extrabold text-[#7f1d1d] shrink-0">3.</span>
+                <span><strong>Document Checklist &amp; Guide:</strong> Personalised docs plus step-by-step apply &amp; follow-up steps.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="font-extrabold text-[#7f1d1d] shrink-0">4.</span>
+                <span><strong>Deadlines &amp; Tracking:</strong> Reminders and application status tracking so claims don’t lapse.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="font-extrabold text-[#7f1d1d] shrink-0">5.</span>
+                <span><strong>Verified Official Sources:</strong> Official portal links paired with last-verified dates.</span>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Column 3: Guardrails & Judge Q&A Readiness -->
+        <article class="lg:col-span-3 bg-white/95 border border-[#e7e5e4] rounded-xl p-3.5 lg:p-4 flex flex-col justify-between gap-2.5">
+          <div>
+            <div class="flex items-center justify-between border-b border-[#f5f5f4] pb-1.5 mb-2">
+              <h2 class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#7f1d1d]">
+                03 · Guardrails
+              </h2>
+              <span class="text-[11px] font-semibold text-[#3f3f46]">Safe &amp; Auditable</span>
+            </div>
+            <ul class="space-y-1.5 text-xs text-[#111827]">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#111827] shrink-0"></span>
+                <span>Says <strong>“likely eligible”</strong>—never “guaranteed”.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#111827] shrink-0"></span>
+                <span><strong>No Aadhaar</strong> or sensitive ID numbers collected.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#111827] shrink-0"></span>
+                <span>Public scheme data &amp; <strong>editable rules</strong>; sample profiles only.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-[#fef2f2] border border-[#fecaca] rounded-lg p-2.5">
+            <p class="text-[11px] font-extrabold uppercase tracking-wider text-[#7f1d1d] mb-1">
+              Post-Demo Q&amp;A Ready
+            </p>
+            <p class="text-[11px] text-[#111827] leading-snug">
+              Prepared answers ready right after the live demo for:
+              <span class="font-semibold">(1) which details matter</span>,
+              <span class="font-semibold">(2) rule accuracy as rules change</span>, and
+              <span class="font-semibold">(3) who pays</span> (NGOs, CSR, banks, CSCs, state govt).
+            </p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Bottom Slide Controls & Status -->
+      <footer class="pt-2 border-t border-[#e7e5e4] flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#3f3f46]">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-[#111827]">Slide 01 · Problem &amp; Scope</span>
+          <span>•</span>
+          <span id="status-note">Press <kbd class="px-1.5 py-0.5 bg-white border border-[#d6d3d1] rounded text-[#111827] font-semibold">F</kbd> for Fullscreen</span>
+        </div>
+        <div class="no-print flex items-center gap-2">
+          <button
+            id="btn-fullscreen"
+            type="button"
+            class="px-3 py-1 rounded-lg border border-[#7f1d1d] text-[#7f1d1d] bg-white hover:bg-[#fef2f2] font-semibold transition-colors cursor-pointer"
+          >
+            Fullscreen (F)
+          </button>
+          <button
+            id="btn-print"
+            type="button"
+            class="px-3 py-1 rounded-lg bg-[#7f1d1d] text-white hover:bg-[#5c1212] font-semibold transition-colors cursor-pointer"
+          >
+            Print / PDF
+          </button>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const rootEl = document.getElementById('slide-root');
+      const fullscreenBtn = document.getElementById('btn-fullscreen');
+      const printBtn = document.getElementById('btn-print');
+      const statusNote = document.getElementById('status-note');
+
+      /**
+       * Toggles browser fullscreen mode safely with a clear status update.
+       */
+      async function toggleFullscreen() {
+        try {
+          if (!document.fullscreenElement) {
+            const target = rootEl || document.documentElement;
+            if (target.requestFullscreen) {
+              await target.requestFullscreen();
+            }
+          } else if (document.exitFullscreen) {
+            await document.exitFullscreen();
+          }
+        } catch (_err) {
+          if (statusNote) {
+            statusNote.textContent = 'Fullscreen unavailable in this frame — use Print / PDF or browser zoom.';
+          }
+        }
+      }
+
+      /**
+       * Triggers native print dialog for clean slide/PDF export.
+       */
+      function triggerPrint() {
+        try {
+          window.print();
+        } catch (_err) {
+          if (statusNote) {
+            statusNote.textContent = 'Print dialog could not open automatically.';
+          }
+        }
+      }
+
+      if (fullscreenBtn) {
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+      }
+
+      if (printBtn) {
+        printBtn.addEventListener('click', triggerPrint);
+      }
+
+      document.addEventListener('keydown', function (event) {
+        const tag = event.target && event.target.tagName ? event.target.tagName.toLowerCase() : '';
+        if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+        if (event.key === 'f' || event.key === 'F') {
+          event.preventDefault();
+          toggleFullscreen();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

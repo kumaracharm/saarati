@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-hidden="true">
+  <circle cx="120" cy="100" r="92" fill="#FBEBDD"/>
+  <!-- chair back -->
+  <rect x="58" y="92" width="26" height="70" rx="10" fill="#7A4A22"/>
+  <!-- body -->
+  <path d="M70 150 L70 100 Q70 84 88 84 L118 84 Q136 84 136 100 L136 150 Z" fill="#B87333"/>
+  <!-- neck -->
+  <rect x="96" y="66" width="14" height="14" fill="#E0A77A"/>
+  <!-- head -->
+  <circle cx="103" cy="52" r="20" fill="#E0A77A"/>
+  <!-- hair -->
+  <path d="M82 50 Q82 28 103 28 Q124 28 124 50 Q118 38 103 38 Q90 38 82 50 Z" fill="#3B2A20"/>
+  <circle cx="110" cy="52" r="2" fill="#3B2A20"/>
+  <path d="M106 62 Q111 65 115 62" stroke="#7A4A22" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- desk -->
+  <rect x="40" y="134" width="170" height="10" rx="4" fill="#7A4A22"/>
+  <rect x="50" y="144" width="8" height="40" fill="#5A3518"/>
+  <rect x="190" y="144" width="8" height="40" fill="#5A3518"/>
+  <!-- notebook -->
+  <rect x="112" y="118" width="60" height="16" rx="2" fill="#FFFFFF" stroke="#7A4A22" stroke-width="2" transform="rotate(-6 142 126)"/>
+  <!-- writing arm and hand -->
+  <path d="M130 100 Q140 112 138 122" stroke="#B87333" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <circle cx="138" cy="124" r="6" fill="#E0A77A"/>
+  <!-- pen, bobbing while writing -->
+  <g>
+    <line x1="144" y1="122" x2="168" y2="104" stroke="#3B2A20" stroke-width="3" stroke-linecap="round"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;3 -2;0 0" dur="0.9s" repeatCount="indefinite"/>
+  </g>
+</svg>
